@@ -1,0 +1,36 @@
+body {
+  font: 95%/90% Verdana, Helvetica, sans-serif;
+  line-height: 150%;
+}
+a {
+  color:blue;
+  text-decoration: underline;
+}
+a:hover {
+  background-color:lightblue;
+}
+table {
+  font-size:10px;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+td, th {
+  border: 1px solid black;
+}
+tr:nth-child(even)
+{
+  background-color:lightblue;
+}
+tr:nth-child(odd)
+{
+  background-color:#668cff;
+}
+tr:hover {
+  background-color:#33ffad;
+}
+th {
+  background-color:#ff6666;
+}
+h3 {
+  margin:auto;
+}
