@@ -34,3 +34,7 @@ th {
 h3 {
   margin:auto;
 }
+button {
+  font: 195%/90% Verdana, Helvetica, sans-serif;
+  line-height: 150%;
+}
