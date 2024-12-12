@@ -1,0 +1,60 @@
+<head>
+  <title>My Playlists</title>
+  <link rel="stylesheet" type="text/css" href="../base.css">
+</head>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+    <body>
+    <h2>New music to listen to</h2>
+    <div id="player"></div>
+
+    <script>
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        function onYouTubeIframeAPIReady() {
+            var numPl = Math.floor((Math.random() * 50) + 1);
+            var player = new YT.Player("player", {
+                height: '390',
+                width: '640',
+                playerVars: {
+                    listType:'playlist',
+                    list:'PL4hAIBmwHD7cbu_opsxhN9fjR_9P1tujv',
+                    index: numPl,
+                    autoplay: 1,
+    },
+                events: {
+                    'onReady': function (event) {
+                        setTimeout(function() {
+                            event.target.setShuffle({'shufflePlaylist' : true});
+                        }, 1000);
+                    }
+                }
+            });
+        }
+    </script>
+  </body>
+</html>
